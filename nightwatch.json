@@ -1,0 +1,78 @@
+{
+    "src_folders": ["tests"],
+    "output_folder": "reports",
+    "custom_commands_path": "",
+    "custom_assertions_path": "",
+    "page_objects_path": "",
+    "globals_path": "global/global_chromedriver.js",
+
+    "selenium": {
+        "start_process": false
+    },
+
+    "test_settings": {
+        "default": {
+            "launch_url": "http://localhost",
+            "selenium_port": 9515,
+            "selenium_host": "localhost",
+            "default_path_prefix" : "",
+            "screenshots": {
+                "enabled": true,
+                "path": "screens"
+            },
+            "desiredCapabilities": {
+                "javascriptEnabled": true,
+                "acceptSslCerts": true,
+                "browserName": "chrome",
+                "chromeOptions": {
+                    "args": [
+                        "headless",
+                        "no-sandbox",
+                        "disable-gpu"
+                    ]
+                }
+            },
+            "detailed_output" : true,
+            "silent" : true,
+            "live_output" : false
+        },
+        "chrome" : {
+            "desiredCapabilities": {
+                "chromeOptions": {
+                    "args": [
+                        "no-sandbox"
+                    ]
+                }
+            }
+        },
+        "marsQA2" : {
+            "launch_url": "http://marsqa2/",
+            "globals" : {
+                "appUrl" : "MarsIntranet",
+                "appUN" : "tcguser",
+                "appPW" : "Abcd!234",
+                "portalUrl" : "MarsPortal",
+                "portalUN" : "Test4809",
+                "portalPW" : "Hello12345"
+            }
+        },
+        "marsQA2_chrome" : {
+            "launch_url": "http://marsqa2/",
+            "globals" : {
+                "appUrl" : "MarsIntranet",
+                "appUN" : "tcguser",
+                "appPW" : "Abcd!234",
+                "portalUrl" : "MarsPortal",
+                "portalUN" : "Test4809",
+                "portalPW" : "Hello12345"
+            },
+            "desiredCapabilities": {
+                "chromeOptions": {
+                    "args": [
+                        "no-sandbox"
+                    ]
+                }
+            }
+        }
+    }
+}
